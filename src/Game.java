@@ -1,8 +1,12 @@
+import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.RenderingHints;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.swing.JPanel;
@@ -10,37 +14,39 @@ import javax.swing.JPanel;
 public class Game extends JPanel{
 	//INSTANCE VARIABLES
 	private boolean gameEnded;
-	private ArrayList<Room> rooms;
+	private ArrayList<Room> rooms = new ArrayList<Room>();
 	private Player ourPlayer;
+	private Image img;
 	
-	public Game () {
+	public Game () throws IOException {
 		//This game has 7 Riddles.
-		Riddle riddle1 = new Riddle("");
-		Riddle riddle2 = new Riddle("");
-		Riddle riddle3 = new Riddle("");
-		Riddle riddle4 = new Riddle("");
-		Riddle riddle5 = new Riddle("");
-		Riddle riddle6 = new Riddle("");
-		Riddle riddle7 = new Riddle("");
+		Riddle riddle1 = new Riddle("K");
+		Riddle riddle2 = new Riddle("C");
+		Riddle riddle3 = new Riddle("S");
+		Riddle riddle4 = new Riddle("R");
+		Riddle riddle5 = new Riddle("O");
+		Riddle riddle6 = new Riddle("S");
+		Riddle riddle7 = new Riddle("C");
 		//This game has 7 Items.
-		Item item1 = new Item ("", "");
-		Item item2 = new Item ("", "");
-		Item item3 = new Item ("", "");
-		Item item4 = new Item ("", "");
-		Item item5 = new Item ("", "");
-		Item item6 = new Item ("", "");
-		Item item7 = new Item ("", "");
+		Item item1 = new Item ("K");
+		Item item2 = new Item ("C");
+		Item item3 = new Item ("S");
+		Item item4 = new Item ("R");
+		Item item5 = new Item ("O");
+		Item item6 = new Item ("S");
+		Item item7 = new Item ("C");
 		//This game has 7 Rooms.
-		rooms.add(new Room (riddle1, item1));
-		rooms.add(new Room (riddle2, item2));
-		rooms.add(new Room (riddle3, item3));
-		rooms.add(new Room (riddle4, item4));
-		rooms.add(new Room (riddle5, item5));
-		rooms.add(new Room (riddle6, item6));
-		rooms.add(new Room (riddle7, item7));
+		rooms.add(new Room (riddle1, item1, ImageIO.read(new File("resources/flower-purple-lical-blosso.jpg"))));
+		rooms.add(new Room (riddle2, item2, ImageIO.read(new File("resources/dahlia-red-blossom.jpeg"))));
+		rooms.add(new Room (riddle3, item3, ImageIO.read(new File("resources/flower-purple-lical-blosso.jpg"))));
+		rooms.add(new Room (riddle4, item4, ImageIO.read(new File("resources/flower-purple-lical-blosso.jpg"))));
+		rooms.add(new Room (riddle5, item5, ImageIO.read(new File("resources/flower-purple-lical-blosso.jpg"))));
+		rooms.add(new Room (riddle6, item6, ImageIO.read(new File("resources/flower-purple-lical-blosso.jpg"))));
+		rooms.add(new Room (riddle7, item7, ImageIO.read(new File("resources/flower-purple-lical-blosso.jpg"))));
 		//This game has 1 player.
 		ourPlayer = new Player();
 		gameEnded = false;
+		img = rooms.get(0).getBackground();
 	}
 	
 	/**
@@ -50,6 +56,15 @@ public class Game extends JPanel{
 	public boolean getGameEnded() {
 		return gameEnded;
 	}
+	public ArrayList<Room> getRooms() {
+		return rooms;
+	}
+	public void setGameEnded(boolean ended) {
+		gameEnded = ended;
+	}
+	public void setImage(Image back) {
+		img = back;
+	}
 	
 	public void paint(Graphics g) {
         super.paint(g);
@@ -58,18 +73,32 @@ public class Game extends JPanel{
             RenderingHints.VALUE_ANTIALIAS_ON);
     }
 	
+	public void paintComponent(Graphics g)
+	{
+		g.drawImage(img, 0, 0, null);
+	}
+	
 	/**
 	 * Main program that plays the game.
 	 * @param args
 	 * @throws InterruptedException
+	 * @throws IOException 
 	 */
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 		JFrame myFrame = new JFrame("GETOUTTAHERE");
 		Game game = new Game();
 		myFrame.add(game);
 		myFrame.setSize(900,800);
 		myFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		myFrame.setVisible(true);
+		
+		while (!game.getGameEnded()) {
+			game.setImage(game.getRooms().get(1).getBackground());
+			if (true) {
+				game.setGameEnded(true);
+			}
+		}
+		
 	}
 
 }

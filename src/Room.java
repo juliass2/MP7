@@ -1,3 +1,9 @@
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 public class Room {
 	//INSTANCE VARIABLES
@@ -16,19 +22,34 @@ public class Room {
 	 */
 	private Item roomsItem;
 	
+	/**
+	 * Background of room.
+	 */
+	private Image background;
+	
 	//CONSTRUCTOR
 	/**
 	 * Constructor for making a room.
 	 * @param inputRiddle the room's riddle
 	 * @param inputItem the room's letter from CSROCKS
+	 * @throws IOException 
 	 */
-	public Room(Riddle inputRiddle, Item inputItem) {
+	public Room(Riddle inputRiddle, Item inputItem, BufferedImage back) throws IOException {
 		roomsRiddle = inputRiddle;
 		unlocked = false;
 		roomsItem = inputItem;
+		background = back;
 	}
 	
 	//GETTERS
+	/**
+	 * get's this room's background.
+	 * @return this room's background.
+	 */
+	public Image getBackground() {
+		return background;
+	}
+	
 	/**
 	 * allows player to find out if the next room is locked or not.
 	 * @return true if it is unlocked, false if it is locked.

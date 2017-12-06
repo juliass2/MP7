@@ -9,7 +9,9 @@ public class Item {
 	/**
 	 * which room this letter is obtained from.
 	 */
-	private String description;
+	private int roomNumber;
+	
+	private static int roomsMade = 1;
 	
 	//CONSTRUCTORS
 	/**
@@ -17,8 +19,15 @@ public class Item {
 	 * @param v the letter it is from CSROCKS.
 	 * @param d which room the letter is collected from.
 	 */
-	public Item(String v, String d) {
+	public Item(String v) {
 		value = v;
-		description = d;
+		roomNumber = roomsMade++;
+	}
+	
+	/**
+	 * To string method which will access this item's value and description.
+	 */
+	public String toString() {
+		return "You found "+ value + " in room " + roomNumber;
 	}
 }
