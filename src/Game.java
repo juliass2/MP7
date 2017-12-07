@@ -1,9 +1,11 @@
 import javax.imageio.ImageIO;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
+import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.io.File;
 import java.io.IOException;
@@ -11,6 +13,7 @@ import java.util.ArrayList;
 
 import javax.swing.JPanel;
 
+@SuppressWarnings("serial")
 public class Game extends JPanel{
 	//INSTANCE VARIABLES
 	private boolean gameEnded;
@@ -49,6 +52,7 @@ public class Game extends JPanel{
 		img = rooms.get(0).getBackground();
 	}
 	
+	//GETTERS
 	/**
 	 * Checks to see if the game is still playing or not
 	 * @return false if the game did not end.
@@ -59,6 +63,11 @@ public class Game extends JPanel{
 	public ArrayList<Room> getRooms() {
 		return rooms;
 	}
+	public Player getPlayer() {
+		return ourPlayer;
+	}
+	
+	//SETTERS
 	public void setGameEnded(boolean ended) {
 		gameEnded = ended;
 	}
@@ -88,9 +97,11 @@ public class Game extends JPanel{
 		JFrame myFrame = new JFrame("GETOUTTAHERE");
 		Game game = new Game();
 		myFrame.add(game);
-		myFrame.setSize(900,800);
+		myFrame.setSize(1200,1000);
 		myFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		myFrame.setVisible(true);
+		JButton moveForward = new JButton();
+		moveForward.setText("More Forward");
 		
 		while (!game.getGameEnded()) {
 			game.setImage(game.getRooms().get(1).getBackground());

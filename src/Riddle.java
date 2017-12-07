@@ -13,4 +13,7 @@ public class Riddle {
 	public Riddle (String sol) {
 		solution = sol;
 	}
+	public String toString() {
+		return "The solution is " + solution;
+	}
 }
