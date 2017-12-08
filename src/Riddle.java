@@ -6,6 +6,7 @@ public class Riddle {
 	 */
 	private String solution;
 	
+	//CONSTRUCTORS
 	/**
 	 * Making a riddle with a solution.
 	 * @param sol the solution to the riddle.
@@ -14,6 +15,16 @@ public class Riddle {
 		solution = sol;
 	}
 	public String toString() {
-		return "The solution is " + solution;
+		return "The answer to the riddle is " + solution;
+	}
+	
+	// GETTERS
+	/**
+	 * Get the solution of the riddle
+	 * 
+	 * @return the solution
+	 */
+	public String getSolution() {
+		return solution;
 	}
 }

@@ -100,7 +100,7 @@ public class Player {
 				Game object = new Game();
 				if (object.getRooms().get(location).isUnlocked()) {
 					location += 1;
-					return "You have moved forward.";
+					return "You have moved forward to Room " + (location + 1) + ".";
 				} else {
 					return "INVALID MOVEMENT. THE DOOR IS LOCKED.";
 				}
@@ -110,7 +110,7 @@ public class Player {
 				return "INVALID MOVEMENT. YOU HAVE REACHED THE BEGINNING.";
 			} else {
 				location -= 1;
-				return "You have moved backwards.";
+				return "You have moved backwards to Room " + (location + 1) + ".";
 			}
 		} else {
 			return "INVALID MOVEMENT.";

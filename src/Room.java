@@ -78,6 +78,12 @@ public class Room {
 	 * @return whether the player is correct or not.
 	 */
 	public boolean solvePuzzle(String playerGuess) {
-		return false;
+		if (playerGuess.equals(roomsRiddle.getSolution())) {
+			return true;
+		} else {
+			Player player = new Player();
+			player.loseLife();
+			return false;
+		}
 	}
 }
