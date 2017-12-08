@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Player {
@@ -11,7 +12,7 @@ public class Player {
 	 * The different letters of CSROCKS the player has.
 	 */
 	private ArrayList<Item> items;
-
+	
 	/**
 	 * Location of the player
 	 */
@@ -57,7 +58,7 @@ public class Player {
 	/**
 	 * Getter method to return where the player is located
 	 * 
-	 * @return the room number
+	 * @return the room number the player is in
 	 */
 	public int getLocation() {
 		return location;
@@ -89,24 +90,30 @@ public class Player {
 	 * 
 	 * @param direction
 	 *            whether the player wants to move forward or back.
+	 * @throws IOException 
 	 */
-	public void move(String direction, int location) {
-		if (direction.equals(MOVEMENTS[1])) {
-			if (location == 0) {
-				System.out.print("INVALID MOVEMENT. YOU HAVE REACHED THE BEGINNING.");
+	public String move(String direction) throws IOException {
+		if (direction.equals(MOVEMENTS[0])) {
+			if (location == NUM_OF_ROOMS - 1) {
+				return "INVALID MOVEMENT. YOU HAVE REACHED THE END.";
 			} else {
-				if (Game.rooms.get(location).isUnlocked()) {
+				Game object = new Game();
+				if (object.getRooms().get(location).isUnlocked()) {
 					location += 1;
+					return "You have moved forward.";
 				} else {
-					System.out.print("INVALID MOVEMENT. THE DOOR IS LOCKED.");
+					return "INVALID MOVEMENT. THE DOOR IS LOCKED.";
 				}
 			}
-		} else if (direction.equals(MOVEMENTS[0])) {
-			if (location == NUM_OF_ROOMS - 1) {
-				System.out.print("INVALID MOVEMENT. YOU HAVE REACHED THE END.");
+		} else if (direction.equals(MOVEMENTS[1])) {
+			if (location == 0) {
+				return "INVALID MOVEMENT. YOU HAVE REACHED THE BEGINNING.";
 			} else {
 				location -= 1;
+				return "You have moved backwards.";
 			}
+		} else {
+			return "INVALID MOVEMENT.";
 		}
 	}
 }

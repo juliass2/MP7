@@ -66,6 +66,10 @@ public class Game extends JPanel{
 	public Player getPlayer() {
 		return ourPlayer;
 	}
+	public boolean dead() {
+		Player player = new Player();
+		return player.getNumOfLives() == 0;
+	}
 	
 	//SETTERS
 	public void setGameEnded(boolean ended) {
@@ -105,7 +109,7 @@ public class Game extends JPanel{
 		
 		while (!game.getGameEnded()) {
 			game.setImage(game.getRooms().get(1).getBackground());
-			if (true) {
+			if (game.dead()) {
 				game.setGameEnded(true);
 			}
 		}

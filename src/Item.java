@@ -28,6 +28,6 @@ public class Item {
 	 * To string method which will access this item's value and description.
 	 */
 	public String toString() {
-		return "You found "+ value + " in room " + roomNumber;
+		return "You found "+ value + " in room " + roomNumber + "!";
 	}
 }
