@@ -4,14 +4,11 @@ BASIC DESCRIPTION:
 This is a first person escape game using Java.
 
 HOW TO PLAY:
-You are locked in a room with colorful wallpapers. You have to get out before you starve to death. You are given total of 5 trials.
-LIMITED LIVES/NUMBER OF TRIES
-	-5 lives total
-ROOMS WITH NUMBERS (NOT IN ORDER OF APPEARANCE)
+You are locked in a building. The objective of this game is to get out of the building before you starve to death. You have to gather hints from the wall of the rooms to solve the riddle and answer it with the keypad on the wall to unlock the door. 
 
-ITEMS:
-Player collects pieces of CSROCKS
-Each letter has a description attachd (¡°You got this from room _¡±)
+After you correctly answer the riddle in the room, an item that will help you to escape the building will be provided. You are given total of 5 lives to correctly answer the riddles. After that, you are automatically dead. 
+
+Use your brain and get out!
 
 CREDITS:
 Background Music: https://youtu.be/3V-pYCGx0C4
