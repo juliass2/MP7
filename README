@@ -1,2 +1,17 @@
 This is a project for CS125's MP7, the final project.
+
+BASIC DESCRIPTION:
+This is a first person escape game using Java.
+
 HOW TO PLAY:
+You are locked in a room with colorful wallpapers. You have to get out before you starve to death. You are given total of 5 trials.
+LIMITED LIVES/NUMBER OF TRIES
+	-5 lives total
+ROOMS WITH NUMBERS (NOT IN ORDER OF APPEARANCE)
+
+ITEMS:
+Player collects pieces of CSROCKS
+Each letter has a description attachd (¡°You got this from room _¡±)
+
+CREDITS:
+Background Music: https://youtu.be/3V-pYCGx0C4

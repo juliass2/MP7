@@ -1,4 +1,4 @@
 
 public class testRiddle {
-  //helicopter
+  //Checking if i am connected to the git repository
 }

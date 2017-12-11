@@ -10,9 +10,9 @@ public class Room {
 	private Riddle roomsRiddle;
 	
 	/**
-	 * Whether the room is locked or not.
+	 * Whether the next room is locked or not.
 	 */
-	private boolean unlocked;
+	private boolean nextUnlocked;
 	
 	/**
 	 * Which letter from CSROCKS this room has.
@@ -24,6 +24,16 @@ public class Room {
 	 */
 	private Image background;
 	
+	/**
+	 * Room's number. The order in which it's answer appears in the FINAL answer.
+	 */
+	private int roomNumber;
+	
+	/**
+	 * Total rooms made.
+	 */
+	static private int roomsMade = 0;
+	
 	//CONSTRUCTOR
 	/**
 	 * Constructor for making a room.
@@ -33,9 +43,10 @@ public class Room {
 	 */
 	public Room(Riddle inputRiddle, Item inputItem, BufferedImage back) throws IOException {
 		roomsRiddle = inputRiddle;
-		unlocked = false;
+		nextUnlocked = false;
 		roomsItem = inputItem;
 		background = back;
+		roomNumber = ++roomsMade;
 	}
 	
 	//GETTERS
@@ -52,7 +63,7 @@ public class Room {
 	 * @return true if it is unlocked, false if it is locked.
 	 */
 	public boolean isUnlocked() {
-		return unlocked;
+		return nextUnlocked;
 	}
 	
 	/**
@@ -69,6 +80,23 @@ public class Room {
 	 */
 	public Item getItem() {
 		return roomsItem;
+	}
+	
+	//SETTERS
+	/**
+	 * allows program to set whether the next room is accessible or not.
+	 * @param b true if the next room is unlocked/accessible, false otherwise.
+	 */
+	public void setUnlocked(boolean b) {
+		nextUnlocked = b;
+	}
+	
+	/**
+	 * allows program to get the room's number.
+	 * @return the room's number.
+	 */
+	public int getRoomNumber() {
+		return roomNumber;
 	}
 	
 	//METHODS

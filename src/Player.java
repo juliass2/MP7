@@ -64,6 +64,15 @@ public class Player {
 		return location;
 	}
 
+	//SETTERS
+	/**
+	 * Sets the player's current location to new value.
+	 * @param x the new location we are setting location to.
+	 */
+	public void setLocation(int x) {
+		location = x;
+	}
+	
 	// METHODS
 	/**
 	 * Allows player to look at their current collection of CSROCKS.

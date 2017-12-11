@@ -1,6 +1,21 @@
 What Julia is doing at the moment:
-	-Will be entering the basic code for each class including instance variables and basic methods
+	-Implemented images, moving through images, buttons, information displays, etc.
 
 What Hyunsoo is doing at the moment:
 	- Modified player movement
 	- Riddle class: getter method & Room: solveRiddle Method
+
+PLEASE DO THIS FOR ME:
+	-Finish the documentation for each of the classes (Except the test classes. those aren't necessary)
+	-Please make a win and lose screen
+	-Please implement moving into win and lose screens when appropriate
+		-I started on this for you, and I indicated where in the Game class code everything should be
+	-Please make an icon for our JFrame (it'll be a small image in the header next to the title of the game)
+		-YOU CAN LOOK AT THE FRAMEHELP.JAVA TEST CLASS to see what an icon looks like. just run the java application!
+	-Please Make the README file
+		-It should be a list of instructions on how to play the game!
+		-Anything else you think is important to the project that the user should know
+	-Anything else you think should be implemented
+	-Maybe we can implement music? Can you research some of that?
+	-ONE LAST SUGGESTION
+		-Can you maybe look up how to put our game on a website?
