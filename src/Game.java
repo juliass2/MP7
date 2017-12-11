@@ -21,7 +21,7 @@ import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
 public class Game extends JFrame {
-	//INSTANCE VARIABLES made changes
+	//INSTANCE VARIABLES 
 	/**
 	 * Whether the game has ended or not.
 	 */
