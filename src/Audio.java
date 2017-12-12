@@ -29,8 +29,7 @@ public class Audio {
 				}.start();
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		} // Satisfy the catch
 	}
 
 	public void stop() {
@@ -53,8 +52,7 @@ public class Audio {
 				}.start();
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		} // Satisfy the catch
 	}
 
 	public boolean isActive() {

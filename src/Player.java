@@ -103,7 +103,9 @@ public class Player {
 	 */
 	public String move(String direction) throws IOException {
 		if (direction.equals(MOVEMENTS[0])) {
-			if (location == NUM_OF_ROOMS - 1) {
+			if (location == 8 || location == 9) {
+				return "INVALID MOVEMENT. YOU HAVE FINISHED THE GAME.";
+			} else if (location == NUM_OF_ROOMS - 1) {
 				return "INVALID MOVEMENT. YOU HAVE REACHED THE END.";
 			} else {
 				Game object = new Game();
@@ -115,7 +117,9 @@ public class Player {
 				}
 			}
 		} else if (direction.equals(MOVEMENTS[1])) {
-			if (location == 0) {
+			if (location == 8 || location == 9) {
+				return "INVALID MOVEMENT. YOU HAVE FINISHED THE GAME.";
+			} else if (location == 0) {
 				return "INVALID MOVEMENT. YOU HAVE REACHED THE BEGINNING.";
 			} else {
 				location -= 1;

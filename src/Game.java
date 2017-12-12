@@ -301,6 +301,8 @@ public class Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if (ourPlayer.getLocation() == 0) {
 					general.setText("You are in the first room.");
+				} else if (ourPlayer.getLocation() == 8 || ourPlayer.getLocation() == 9) { 
+					general.setText("The game is finished.");
 				} else {
 					ourPlayer.setLocation(ourPlayer.getLocation() - 1);
 					general.setText("");
