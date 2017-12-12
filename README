@@ -1,14 +1,28 @@
 This is a project for CS125's MP7, the final project.
+Contributors: Julia Son and Hyunsoo Lee
 
 BASIC DESCRIPTION:
 This is a first person escape game using Java.
 
-HOW TO PLAY:
-You are locked in a building. The objective of this game is to get out of the building before you starve to death. You have to gather hints from the wall of the rooms to solve the riddle and answer it with the keypad on the wall to unlock the door. 
+You are locked in a building. The objective of this game is to get out of the building before you starve to death. 
+You have to gather hints from the wall of the rooms to solve the riddle and answer it using the keypad on the wall to unlock the door. 
 
-After you correctly answer the riddle in the room, an item that will help you to escape the building will be provided. You are given total of 5 lives to correctly answer the riddles. After that, you are automatically dead. 
+After you correctly answer the riddle in the room, an clue that will help you to escape the building will be provided. 
+You are given total of 5 lives to correctly answer every riddle. If you exhaust those lives, you will die. 
 
 Use your brain and get out!
+
+HOW TO PLAY:
+Use the keypad on the left side of the screen to input your solution. You can press delete to delete your answer and enter to enter it.
+For every room except the last, the solution should be a single letter.
+Use the previous room and next room buttons on the bottom of the screen to move forward and backward.
+
+Displays (black lines) on the top border and bottom border tell you important information regarding:
+  the number of lives you have
+  the current room you are in
+  whether your inputted answer is correct or not
+  whether the next room is locked or not
+  a description about what the solution will be (a single letter versus a word)
 
 CREDITS:
 Background Music: https://youtu.be/3V-pYCGx0C4
