@@ -1,6 +1,80 @@
-What Julia is doing at the moment:
-	-Implemented images, moving through images, buttons, information displays, etc.
+DO NOT READ THIS IF YOU WANT TO PLAY THIS GAME
 
-What Hyunsoo is doing at the moment:
-	- Modified player movement
-	- Riddle class: getter method & Room: solveRiddle Method
+
+
+Provide a button panel with all 26 letters of the alphabet
+Hints as images throughout room.
+
+
+
+ROOMS:
+---------------------------------------------------------------
+First room
+Room Name: 6
+
+Riddles/Puzzles:
+What do 
+Kite
+Keyboard
+Key
+have in common?
+
+
+Answer: K
+---------------------------------------------------------------
+Second Room
+Room Name: 1
+
+Riddles/Puzzles:
+Image of the C note
+
+Answer: C
+---------------------------------------------------------------
+Third Room
+Room Name: 2
+
+Riddles/Puzzles:
+3 x 3 panel. Scramble each ninth to make an image.
+
+Answer: S
+---------------------------------------------------------------
+Fourth Room
+Room Name: 3
+
+Riddles/Puzzles:
+Morse Code
+.-.
+
+Answer: R
+---------------------------------------------------------------
+Fifth Room
+Room Name: 4
+
+Riddles/Puzzles:
+Remove colors from the rainbow that contain the letter O:
+Orange
+Yellow
+Indigo
+
+Answer: O
+---------------------------------------------------------------
+Sixth Room
+Room Name: 7
+
+Riddles/Puzzles:
+6 7 16 17 60 61 62 63 (All the numbers that start with letter S)
+
+Answer: S
+---------------------------------------------------------------
+Seventh Room
+Room Name: 5
+
+Riddles/Puzzles:
+See, Ci (Yes in Spanish), Sea
+
+Answer: C
+---------------------------------------------------------------
+Room Name: ESCAPE ROOM
+1234567 (Put answers to the rooms in order)
+
+Answer: CSROCKS

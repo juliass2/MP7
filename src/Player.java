@@ -93,40 +93,4 @@ public class Player {
 	public void loseLife() {
 		numOfLives--;
 	}
-
-	/**
-	 * Allows the player to move forward or backward into another room.
-	 * 
-	 * @param direction
-	 *            whether the player wants to move forward or back.
-	 * @throws IOException 
-	 */
-	public String move(String direction) throws IOException {
-		if (direction.equals(MOVEMENTS[0])) {
-			if (location == 8 || location == 9) {
-				return "INVALID MOVEMENT. YOU HAVE FINISHED THE GAME.";
-			} else if (location == NUM_OF_ROOMS - 1) {
-				return "INVALID MOVEMENT. YOU HAVE REACHED THE END.";
-			} else {
-				Game object = new Game();
-				if (object.getRooms().get(location).isUnlocked()) {
-					location += 1;
-					return "You have moved forward to Room " + (location + 1) + ".";
-				} else {
-					return "INVALID MOVEMENT. THE DOOR IS LOCKED.";
-				}
-			}
-		} else if (direction.equals(MOVEMENTS[1])) {
-			if (location == 8 || location == 9) {
-				return "INVALID MOVEMENT. YOU HAVE FINISHED THE GAME.";
-			} else if (location == 0) {
-				return "INVALID MOVEMENT. YOU HAVE REACHED THE BEGINNING.";
-			} else {
-				location -= 1;
-				return "You have moved backwards to Room " + (location + 1) + ".";
-			}
-		} else {
-			return "INVALID MOVEMENT.";
-		}
-	}
 }
